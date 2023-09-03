@@ -30,8 +30,7 @@ public class Drive extends SubsystemBase {
     rightDrive = new MotorControllerGroup(frontRight, backRight);
     leftDrive = new MotorControllerGroup(frontLeft, backLeft);
 
-    backLeft.setInverted(true);
-    backRight.setInverted(true);
+    leftDrive.setInverted(true);
     mDrive = new DifferentialDrive(rightDrive, leftDrive);
   }
 

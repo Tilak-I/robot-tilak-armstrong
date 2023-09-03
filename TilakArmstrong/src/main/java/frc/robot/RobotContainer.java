@@ -32,7 +32,7 @@ public class RobotContainer {
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() 
   {
-    controlDrive.setDefaultCommand(new arcadeDriveCmd(() -> driverController.getLeftY(),()-> driverController.getRightX(), controlDrive));
+    controlDrive.setDefaultCommand(new arcadeDriveCmd(() -> -driverController.getLeftY(),()-> -driverController.getRightX(), controlDrive));
     // Configure the trigger bindings
     configureBindings();
   }

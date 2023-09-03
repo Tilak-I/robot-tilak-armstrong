@@ -32,7 +32,13 @@ public class arcadeDriveCmd extends CommandBase {
   @Override
   public void execute() 
   {
-    kDrive.defaultDrive(speed.getAsDouble(), rotation.getAsDouble());
+    double deadX = speed.getAsDouble();
+    double deadY = rotation.getAsDouble();
+    
+    if(Math.abs(deadX) <= 0.1) deadX = 0;
+    if(Math.abs(deadY) <= 0.1) deadY = 0.0;
+
+    kDrive.defaultDrive(deadX, deadY);
   }
 
   // Called once the command ends or is interrupted.

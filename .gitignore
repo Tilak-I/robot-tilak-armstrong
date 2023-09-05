@@ -1,0 +1,7 @@
+
+*.lock
+TilakArmstrong/.gradle/7.5.1/checksums/md5-checksums.bin
+*.bin
+*.class
+*.pdb
+*.dll
